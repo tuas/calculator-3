@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Costos de Impresión 3D</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Costos de Impresión 3D</h1>
+        <div class="input-section">
+            <label for="filament-cost">Costo del Filamento (por kg):</label>
+            <input type="number" id="filament-cost" value="20">
+            
+            <label for="power-cost">Costo del Kilowatt-hora:</label>
+            <input type="number" id="power-cost" value="0.15">
+            
+            <label for="machine-wear">Desgaste de la Máquina (por hora):</label>
+            <input type="number" id="machine-wear" value="0.10">
+            
+            <label for="print-time">Tiempo de Impresión (horas):</label>
+            <input type="number" id="print-time" value="2">
+            
+            <label for="print-weight">Peso de la Impresión (gramos):</label>
+            <input type="number" id="print-weight" value="100">
+            
+            <label for="power-consumption">Consumo Nominal de la Máquina (Watts):</label>
+            <input type="number" id="power-consumption" value="200">
+            
+            <label for="profit-factor">Factor de Ganancia:</label>
+            <input type="number" id="profit-factor" value="1.5">
+            
+            <button id="calculate-btn">Calcular Costo</button>
+        </div>
+        <div class="results-section">
+            <h2>Resultados</h2>
+            <table id="results-table">
+                <thead>
+                    <tr>
+                        <th>Nombre del Archivo</th>
+                        <th>Fecha de Creación</th>
+                        <th>Costo Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los resultados se insertarán aquí -->
+                </tbody>
+            </table>
+            <button id="download-btn">Descargar Tabla</button>
+            <input type="file" id="upload-file" accept=".json">
+            <button id="upload-btn">Cargar Tabla</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
